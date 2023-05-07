@@ -4,12 +4,13 @@ import Paragraph from '../components/paragraph';
 import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { BioSection, BioYear } from '../components/bio';
-
+import Layout from '../components/layouts/article';
 
 
 const Page = () => {
     return(
-        <Container>
+        <Layout>
+                 <Container>
             <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align='center'>
                 Hello, I am a freelancer dev in Peru!
             </Box>
@@ -82,6 +83,7 @@ const Page = () => {
                 </Paragraph>
             </Section>
         </Container>
+        </Layout>
     )
 }
 export default Page;
