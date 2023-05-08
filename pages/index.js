@@ -1,16 +1,22 @@
-import {Container, Box, Heading, Image, useColorModeValue, Link, Button} from '@chakra-ui/react';
-import Section from '../components/section'
-import Paragraph from '../components/paragraph';
+
 import NextLink from 'next/link'
+
 import { ChevronRightIcon } from '@chakra-ui/icons';
+import {Container, Box, Heading, Image, useColorModeValue, Link, Button} from '@chakra-ui/react';
+
+import confetti from 'canvas-confetti';
+
 import { BioSection, BioYear } from '../components/bio';
 import Layout from '../components/layouts/article';
-
+import Section from '../components/section'
+import Paragraph from '../components/paragraph';
 
 const Page = () => {
+    
+
     return(
         <Layout>
-                 <Container>
+        <Container>
             <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align='center'>
                 Hello, I am a freelancer dev in Peru!
             </Box>

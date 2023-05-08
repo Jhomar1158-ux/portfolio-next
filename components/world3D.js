@@ -5,7 +5,7 @@ import { loadGLTFModel } from '../lib/model'
 import { WorldContainer, WorldSpinner } from './world3D-loader'
 
 function easeOutCirc(x) {
-  return Math.sqrt(1 - Math.pow(x - 1, 4))
+    return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
 const World3D = () => {
