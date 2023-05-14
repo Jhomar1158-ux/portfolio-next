@@ -38,7 +38,7 @@ const Page = () => {
             </Box>
             <Section delay={0.1}>
                 <Heading as="h3" variant="section-title">
-                    Projects
+                    Work
                 </Heading>
                 <Paragraph>
                     Jhomar es un estudiantelorem lorem telorem lorem  telorem lorem  telorem lorem  telorem lorem  telorem lorem  telorem lorem  telorem lorem  telorem lorem de Ing. ucto llamado {' '}
@@ -67,10 +67,6 @@ const Page = () => {
                 <BioSection>
                     <BioYear>2022</BioYear>
                     Complete el Bootcamp Fullstack MERN, Spring Boot & Flask de Coding Dojo Chile
-                </BioSection>
-                <BioSection>
-                    <BioYear>1999</BioYear>
-                    Nacio en Lima, Peru
                 </BioSection>
             </Section>
             <Section delay={0.2}>

@@ -1,23 +1,10 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
-import confetti from 'canvas-confetti'
 
 const ThemeToggleButton = () => {
-    const { toggleColorMode, colorMode } = useColorMode()
-    console.log(colorMode)
-    if(colorMode === 'dark'){
-        confetti({
-            zIndex:999,
-            particleCount: 100,
-            spread: 160,
-            angles: -100,
-            origin:{
-                x:1,
-                y:1,
-            }
-        })
-    }
+    const { toggleColorMode } = useColorMode()
+    
     return (
         <AnimatePresence mode='wait' initial={false}>
         <motion.div

@@ -22,33 +22,8 @@ const Projects = () => {
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="pilar" title='Pilar App' thumbnail={'/images/projects/bannerPilar.jpg'}>
-                            App para gestionar tu energia fisica, mental y emocional
-                        </WorkGridItem>
-                    </Section>
-                    <Section>
-                        <WorkGridItem id="senci" title='Senci ATM' thumbnail={'/images/projects/bannerSenci.jpg'}>
-                            Cajero electronico de la billeteras virtual Yape
-                        </WorkGridItem>
-                    </Section>
-                    <Section>
-                        <WorkGridItem id="pilar" title='Pilar App' thumbnail={'/images/projects/bannerPilar.jpg'}>
-                            App para gestionar tu energia fisica, mental y emocional
-                        </WorkGridItem>
-                    </Section>
-                    <Section>
-                        <WorkGridItem id="senci" title='Senci ATM' thumbnail={'/images/projects/bannerSenci.jpg'}>
-                            Cajero electronico de la billeteras virtual Yape
-                        </WorkGridItem>
-                    </Section>
-                    <Section>
-                        <WorkGridItem id="pilar" title='Pilar App' thumbnail={'/images/projects/bannerPilar.jpg'}>
-                            App para gestionar tu energia fisica, mental y emocional
-                        </WorkGridItem>
-                    </Section>
-                    <Section>
-                        <WorkGridItem id="senci" title='Senci ATM' thumbnail={'/images/projects/bannerSenci.jpg'}>
-                            Cajero electronico de la billeteras virtual Yape
+                        <WorkGridItem id="travis" title='Travis' thumbnail={'/images/projects/bannerTravis.jpg'}>
+                            Red social de Turistas
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
