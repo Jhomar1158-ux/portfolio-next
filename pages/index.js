@@ -2,14 +2,21 @@
 import NextLink from 'next/link'
 
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import {Container, Box, Heading, Image, useColorModeValue, Link, Button} from '@chakra-ui/react';
-
-import confetti from 'canvas-confetti';
+import {
+    Container, Box, Heading, Image, useColorModeValue, Link, Button,
+    chakra,
+    UnorderedList,
+    ListItem
+} from '@chakra-ui/react';
 
 import { BioSection, BioYear } from '../components/bio';
 import Layout from '../components/layouts/article';
 import Section from '../components/section'
 import Paragraph from '../components/paragraph';
+
+const ProfileImage = chakra(Image, {
+    shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+})
 
 const Page = () => {
     
@@ -17,24 +24,47 @@ const Page = () => {
     return(
         <Layout>
         <Container>
-            <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align='center'>
-                Hello, I am a freelancer dev in Peru!
-            </Box>
+
             <Box display={{ md: 'flex'}}>
                 <Box flexGrow={1}>
                     <Heading as='h2' variant='page-title'>
                         Jhomar Astuyauri
                     </Heading>
-                    <p>Frontend/Product/Design</p>
+                    <p>Desarrollador de Interfaz de Usuario</p>
+                    <p>Emprendedor en formación</p>
                 </Box>
-                <Box flexShrink={0} mt={{base:4, md:0}} ml={{md:6}} align='center' w="100px" h="100px" display="inline-block">
-                        <Image borderColor='whiteAlpha.800' borderWidth={2} borderStyle="solid" display="inline-block" borderRadius="full"
-                        height="100"
-                        width="100" 
+                <Box
+                    flexShrink={0}
+                    mt={{ base: 4, md: 0 }}
+                    ml={{ md: 6 }}
+                    textAlign="center"
+                    >
+                    <Box
+                        borderColor="whiteAlpha.800"
+                        borderWidth={2}
+                        borderStyle="solid"
+                        w="100px"
+                        h="100px"
+                        display="inline-block"
+                        borderRadius="full"
+                        overflow="hidden"
+                    >
+                        <ProfileImage
                         src="/images/JhomarConsultor.png"
-                        alt='Profile image'
+                        alt="Profile image"
+                        borderRadius="full"
+                        width="100"
+                        transform="scaleX(-1)"
                         />
+                    </Box>
                 </Box>
+            </Box>
+            <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} mt={5} >
+            <UnorderedList style={{ listStyleType: "none" }}>
+                <ListItem>🌏 Vivo en un país multicultural, lleno de tradiciones y una excelente gastronomía llamado Perú.</ListItem>
+                <ListItem>📺 Me encantan las series/películas de comedia y aventura.</ListItem>
+                <ListItem>🎵 Suelo escuchar música Indie, Pop y Rock (Aunque realmente me gusta todo tipo de música).</ListItem>
+            </UnorderedList>
             </Box>
             <Section delay={0.1}>
                 <Heading as="h3" variant="section-title">
