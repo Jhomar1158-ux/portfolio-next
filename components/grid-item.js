@@ -34,14 +34,14 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
             alt={title}
             className="grid-item-thumbnail"
             placeholder="blur"
-            style={{ width: "auto", height: "100px", margin: "0 auto" }}
+            style={{ width: "300px", height: "auto", margin: "0 auto" }}
         />
         <LinkOverlay as="div" href={`/projects/${id}`}>
-            <Text mt={2} fontSize={20}>
+            <Text mt={2} fontSize={14}>
             {title}
             </Text>
         </LinkOverlay>
-        <Text fontSize={14}>{children}</Text>
+        <Text fontSize={10}>{children}</Text>
         </LinkBox>
     </Box>
 )

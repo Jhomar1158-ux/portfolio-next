@@ -6,36 +6,39 @@ import {
     Container, Box, Heading, Image, useColorModeValue, Link, Button,
     chakra,
     UnorderedList,
-    ListItem
+    ListItem,
+    Divider
 } from '@chakra-ui/react';
 
-import { BioSection, BioYear } from '../components/bio';
 import Layout from '../components/layouts/article';
 import Section from '../components/section'
 import Paragraph from '../components/paragraph';
+import { PeruIcon } from '../components/PeruIcon';
+import Projects from './projects';
 
 const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
 const Page = () => {
-    
-
     return(
         <Layout>
         <Container>
-
-            <Box display={{ md: 'flex'}}>
+            <Box display={'flex'}>
                 <Box flexGrow={1}>
-                    <Heading as='h2' variant='page-title'>
-                        Jhomar Astuyauri
-                    </Heading>
+                    <Box display={'flex'} justifyContent={'start'} alignItems={'center'} gap={2}>
+                        <Heading as='h2' variant='page-title'>
+                            Jhomar Astuyauri 
+                        </Heading>
+                        <PeruIcon/>
+                    </Box>
+                    <Box display={'flex'} flexDirection={'column'} gap={2} marginTop={1}>
                     <p>Desarrollador de Interfaz de Usuario</p>
-                    <p>Emprendedor en formación</p>
-                </Box>
+                    <p>🏊🏽‍♂️ 🎳 🛌🏾 📽 🐰 🛸</p>
+                    </Box>
+                </Box> 
                 <Box
-                    flexShrink={0}
-                    mt={{ base: 4, md: 0 }}
+                    mt={{ md: 0 }}
                     ml={{ md: 6 }}
                     textAlign="center"
                     >
@@ -59,60 +62,61 @@ const Page = () => {
                     </Box>
                 </Box>
             </Box>
-            <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} mt={5} >
-            <UnorderedList style={{ listStyleType: "none" }}>
-                <ListItem>🌏 Vivo en un país multicultural, lleno de tradiciones y una excelente gastronomía llamado Perú.</ListItem>
-                <ListItem>📺 Me encantan las series/películas de comedia y aventura.</ListItem>
-                <ListItem>🎵 Suelo escuchar música Indie, Pop y Rock (Aunque realmente me gusta todo tipo de música).</ListItem>
-            </UnorderedList>
-            </Box>
             <Section delay={0.1}>
                 <Heading as="h3" variant="section-title">
-                    Work
+                    Proyectos
                 </Heading>
-                <Paragraph>
-                    Jhomar es un estudiantelorem lorem telorem lorem  telorem lorem  telorem lorem  telorem lorem  telorem lorem  telorem lorem  telorem lorem  telorem lorem de Ing. ucto llamado {' '}
-                    <NextLink href="/projects/pilar">
-                        <Link>Pilar</Link>
-                    </NextLink>
-                    .
-                </Paragraph>
-                <Box align="center" my={4}>
-                    <NextLink href='/projects'>
-                        <Button 
-                        rightIcon={<ChevronRightIcon/>}
-                        colorScheme='teal'
-                        >My portfolio</Button>
-                    </NextLink>
+                <Section delay={0.1}>
+                    <Heading as="h4" variant="section-subtitle">
+                        Freelancing
+                    </Heading>
+                    <Projects type={"freelancing"}/>
+                </Section>
+                <Section delay={0.1}>
+                    <Heading as="h4" variant="section-subtitle">
+                        Open Source
+                    </Heading>
+                    <Projects type={"opensource"}/>
+                </Section>
+            </Section>
+            <Box marginY={4}>
+                <Divider/>
+            </Box>
+            <Section delay={0.2}>
+                <Box display={'flex'} justifyContent={'center'} gap={4} alignItems={'center'}>
+                    <a href='https://github.com/Jhomar1158-ux' target='_blank'>
+                        <Image 
+                            src='/images/githubLogo.png'
+                            width={5}
+                            height={5}
+                            alt="github"
+                            />
+                    </a>
+                    <a href='https://www.linkedin.com/in/jhomar-astuyauri/' target='_blank'>
+                        <Image 
+                        src='/images/linkedinLogo.png'
+                        width={5}
+                        height={5}
+                        alt="linkedin"
+                        />
+                    </a>
+                    <a href='https://wa.link/2l4hkc' target='_blank'>
+                        <Image 
+                        src='/images/whatsappLogo.png'
+                        width={5}
+                        height={5}
+                        alt="whastapp"
+                        />
+                    </a>
+                    <a href='mailto:jhomarcristianelias@gmail.com'>
+                        <Image 
+                        src='/images/emailLogo.png'
+                        width={5}
+                        height={5}
+                        alt="gmail"
+                        />
+                    </a>
                 </Box>
-            </Section>
-            <Section delay={0.2}>
-                <Heading as ='h3' variant='section-title'>
-                    Bio
-                </Heading>
-                <BioSection>
-                    <BioYear>2023 to present</BioYear>
-                    Working as a freelancer
-                </BioSection>
-                <BioSection>
-                    <BioYear>2022</BioYear>
-                    Complete el Bootcamp Fullstack MERN, Spring Boot & Flask de Coding Dojo Chile
-                </BioSection>
-            </Section>
-            <Section delay={0.2}>
-                <Heading as ='h3' variant='section-title'>
-                    I ♥
-                </Heading>
-                <Paragraph>
-                    All kind of Films, Music,{' '}
-                    <Link href="/" target="_blank">
-                        be a Volunteer
-                    </Link>
-                    , Swimming,{' '}
-                    <Link href="/" target="_blank">
-                        Teach
-                    </Link>
-                </Paragraph>
             </Section>
         </Container>
         </Layout>

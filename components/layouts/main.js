@@ -7,10 +7,11 @@ const Main = ({children, router}) => {
         <Box as="main" pb={8}>
             <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <title>Jhomar Astuyauri - Homepage</title>
+            <title>Jhomar Astuyauri - Portafolio</title>
+            <link rel="icon" href="/images/favicon.ico" />
             </Head>
-            <Navbar path={router.asPath}/>
-            <Container maxW="container.lg" pt={20}>
+            {/* <Navbar path={router.asPath}/> */}
+            <Container maxW="container.lg" pt={10}>
                 {children}
             </Container>
         </Box>

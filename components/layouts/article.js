@@ -25,6 +25,7 @@ const Layout = ({ children, title }) => {
                 <title>{t}</title>
                 <meta name="twitter:title" content={t} />
                 <meta property="og:title" content={t} />
+                <link rel="icon" href="/images/favicon.ico" />
             </Head>
             )}
             {children}

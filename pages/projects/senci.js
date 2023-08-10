@@ -21,21 +21,21 @@ const Project = () => {
                     Senci ATM <Badge>2022 - 2023</Badge>
                 </Title>
                 <P>
-                    Cash machine for Yape!
+                Senci es un cajero automático que verifica, simplifica e intercambia tu dinero digital en real, brindándote una mejor gestión de tus finanzas.
                 </P>
                 <List ml={4} my={4}>
-                    <ListItem>
+                    {/* <ListItem>
                         <Meta>Webiste</Meta>
                         <Link href='https://google.com' target='_blank'>
                             https://google.com <ExternalLinkIcon mx='2px'/>
                         </Link>
+                    </ListItem> */}
+                    <ListItem>
+                        <Meta>Tecnologías</Meta>
+                        <span>Flask, Javascript, TailwindCSS, MySQL, Figma, Trello, Scrum</span>
                     </ListItem>
                     <ListItem>
-                        <Meta>Stack</Meta>
-                        <span>Flask, TailwindCSS, MySQL</span>
-                    </ListItem>
-                    <ListItem>
-                        <Meta>Source</Meta>
+                        <Meta>Código</Meta>
                         <Link href='https://github.com/Jhomar1158-ux/SenciLovers' target='_blank'>
                         @github.com/Jhomar1158-ux/SenciLovers <ExternalLinkIcon mx='2'/>
                         </Link>
@@ -47,7 +47,7 @@ const Project = () => {
                     <ProjectImage src="/images/projects/03_senci.jpeg" alt="Senci" />
                 </SimpleGrid>
                 <Heading as="h4" fontSize={16} my={6}>
-                    <Center>Contests</Center>
+                    <Center>Feria de Proyectos IEEE RAS Perú 2023</Center>
                 </Heading>
                 <ProjectImage src="/images/projects/04_senci.jpeg" alt="Senci" />
                 <ProjectImage src="/images/projects/05_senci.jpeg" alt="Senci" />
